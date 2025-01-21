@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "buyer_email": "michael.roberts@example.com",
+      "job_title": "Frontend Web Developer",
+      "deadline": "2025-03-10",
+      "description": "Create a dynamic frontend interface for an online booking platform.",
+      "category": "Web Development",
+      "maximum_price": 3500,
+      "minimum_price": 2000
+    },
+    {
+      "id": 2,
+      "buyer_email": "lisa.bennett@example.net",
+      "job_title": "Logo and Branding Designer",
+      "deadline": "2025-02-28",
+      "description": "Design a logo and branding kit for a startup fashion brand.",
+      "category": "Graphic Design",
+      "maximum_price": 1800,
+      "minimum_price": 1200
+    },
+    {
+      "id": 3,
+      "buyer_email": "david.jackson@example.org",
+      "job_title": "Social Media Strategist",
+      "deadline": "2025-04-05",
+      "description": "Develop a content strategy for Facebook and Instagram campaigns.",
+      "category": "Digital Marketing",
+      "maximum_price": 2500,
+      "minimum_price": 1500
+    },
+    {
+      "id": 4,
+      "buyer_email": "sarah.mitchell@example.com",
+      "job_title": "Backend Web Developer",
+      "deadline": "2025-03-20",
+      "description": "Build and maintain APIs for a healthcare management system.",
+      "category": "Web Development",
+      "maximum_price": 4000,
+      "minimum_price": 2500
+    },
+    {
+      "id": 5,
+      "buyer_email": "tom.evans@example.org",
+      "job_title": "UI/UX Designer",
+      "deadline": "2025-02-15",
+      "description": "Design user-friendly interfaces for a mobile banking application.",
+      "category": "Graphic Design",
+      "maximum_price": 2200,
+      "minimum_price": 1500
+    },
+    {
+      "id": 6,
+      "buyer_email": "amanda.jones@example.net",
+      "job_title": "SEO Content Marketer",
+      "deadline": "2025-03-30",
+      "description": "Optimize website articles for search engines and create meta descriptions.",
+      "category": "Digital Marketing",
+      "maximum_price": 3000,
+      "minimum_price": 2000
+    }
+  ]
+  
