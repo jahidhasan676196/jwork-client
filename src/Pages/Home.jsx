@@ -1,9 +1,12 @@
-import React from 'react';
+
+import Curosel from '../Components/Curosel';
+import TabCategories from '../Components/TabCategories';
 
 const Home = () => {
     return (
         <div>
-            this is home section
+            <Curosel></Curosel>
+            <TabCategories></TabCategories>
         </div>
     );
 };
