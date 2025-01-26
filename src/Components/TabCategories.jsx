@@ -14,7 +14,7 @@ const TabCategories = () => {
     <Tabs className={`text-center mt-10`}>
       <TabList>
         <Tab>Web development</Tab>
-        <Tab>Graphic Design</Tab>
+        <Tab>Graphics Design</Tab>
         <Tab>Digital Marketing</Tab>
       </TabList>
 
@@ -25,7 +25,7 @@ const TabCategories = () => {
       </TabPanel>
       <TabPanel>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-10 mt-6'>
-          {jobs.filter(job=>job.category=='Graphic Design').map(job=><JobCard key={job.id} job={job}></JobCard>)}
+          {jobs.filter(job=>job.category=='Graphics Design').map(job=><JobCard key={job.id} job={job}></JobCard>)}
         </div>
       </TabPanel>
       <TabPanel>

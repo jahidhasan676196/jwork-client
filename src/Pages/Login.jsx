@@ -1,19 +1,45 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, Navigate, useNavigate } from "react-router-dom"
 import { Authcontext } from "../AuthProvider/AuthProvider"
 
 const Login = () => {
-  const {user,setUser,signInWithGoogle}=useContext(Authcontext)
+  const Navigate=useNavigate()
+  const {user,setUser,signInWithGoogle,signInWithEmailPassword}=useContext(Authcontext)
 
   const handleGoogleSignIN=()=>{
     signInWithGoogle()
     .then((result)=>{
       setUser(result.user)
       alert('sign in is sucessfull')
+      if(result.user){
+        Navigate('/')
+      }
       console.log(result.user);
     }).catch(error=>{
       console.error(error);
     })
+  }
+  const handleLogin=(e)=>{
+    e.preventDefault()
+    const form=e.target
+    const email=form.email.value
+    const password=form.password.value
+    console.log(email,password);
+
+    signInWithEmailPassword(email,password)
+    .then(cUser=>{
+      console.log(cUser.user);
+      setUser(cUser.user)
+      alert('Login sucessfull');
+      if(cUser.user){
+        Navigate('/')
+      }
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+    
+    form.reset()
   }
   
     return (
@@ -75,7 +101,7 @@ const Login = () => {
   
               <span className='w-1/5 border-b dark:border-gray-400 lg:w-1/4'></span>
             </div>
-            <form>
+            <form onSubmit={handleLogin}>
               <div className='mt-4'>
                 <label
                   className='block mb-2 text-sm font-medium text-gray-600 '

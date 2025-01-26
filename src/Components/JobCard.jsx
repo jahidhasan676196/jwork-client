@@ -4,14 +4,7 @@ import { Link } from 'react-router-dom'
 
 const JobCard = ({ job }) => {
   const {
-    _id,
-    job_title,
-    description,
-    maximum_price,
-    minimum_price,
-    category,
-    deadline,
-    buyer_email
+    _id,job_title,category, date,min_price,max_price,description,buyer_email
 
   } = job || {}
   return (
@@ -21,7 +14,7 @@ const JobCard = ({ job }) => {
     >
       <div className='flex items-center justify-between'>
         <span className='text-xs font-light text-gray-800 '>
-          Deadline: {new Date(deadline).toLocaleDateString()}
+          Deadline: {new Date(date).toLocaleDateString()}
         </span>
         <span className='px-3 py-1 text-[8px] text-blue-800 uppercase bg-blue-200 rounded-full '>
           {category}
@@ -37,7 +30,7 @@ const JobCard = ({ job }) => {
           {description.substring(0, 70)}...
         </p>
         <p className='mt-2 text-sm font-bold text-gray-600 '>
-          Range: ${minimum_price} - ${maximum_price}
+          Range: ${min_price} - ${max_price}
         </p>
       </div>
     </Link>

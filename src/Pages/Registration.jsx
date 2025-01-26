@@ -24,6 +24,15 @@ const Registration = () => {
         .catch(error=>{
             console.log(error);
         })
+        alert('signUp sucessfull')
+    }
+    const handleGoogleSignIn=()=>{
+      signInWithGoogle()
+      .then(currentUser=>{
+        console.log(currentUser);
+        setUser(currentUser.user)
+      })
+      alert('sign In sucessfull')
     }
     return (
       <div className='flex justify-center items-center min-h-[calc(100vh-306px)]'>
@@ -41,7 +50,7 @@ const Registration = () => {
               Get Your Free Account Now.
             </p>
   
-            <div className='flex cursor-pointer items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 '>
+            <div onClick={handleGoogleSignIn} className='flex cursor-pointer items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg   hover:bg-gray-50 '>
               <div className='px-4 py-2'>
                 <svg className='w-6 h-6' viewBox='0 0 40 40'>
                   <path
